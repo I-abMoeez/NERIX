@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #080b14; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #080b14; color: #eef0fb; font-family: 'DM Sans', sans-serif; }
+button, input, select { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(139, 92, 246, .35); color: #fff; }
+* { scrollbar-width: thin; scrollbar-color: #333b52 transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #333b52; border-radius: 20px; }
+@layer components {
+  .surface { @apply border border-white/[0.075] bg-white/[0.035] backdrop-blur-xl; }
+  .muted { @apply text-slate-400; }
+  .eyebrow { @apply text-[11px] font-bold uppercase tracking-[0.19em] text-violet-300; }
+  .field { @apply w-full rounded-xl border border-white/10 bg-[#0b0f1b] px-3.5 py-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-violet-400/70 focus:ring-2 focus:ring-violet-500/10; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-950/40 transition hover:bg-violet-400 active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-white/20 hover:bg-white/[0.08] active:scale-[.98]; }
+}
